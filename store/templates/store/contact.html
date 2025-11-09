@@ -1,28 +1,54 @@
 {% extends 'store/base.html' %}
 
-{% block title %}Contact {% endblock %}
+{% block title %}Contacto{% endblock %}
 
 {% block content %}
-<div class="mt-2 mb-4 px-4 py-2">
-    <h1 class="text-center mb-4">
-        Nuevos Productos
-    </h1>
-    <div class="container text-center">
-        <div class="row justify-content-center">
-            {% for item in items %}
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
-                    <div class="card" style="width: 18rem">
-                        <img src="{{ item.image.url }}" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ item.name }} - {{item.price}}</h5>
-                            <p class="card-text">{{item.description}}</p>
-                            <a href="#" class="btn btn-primary">Mas Detalles...</a>
-                        </div>
-                    </div>
+<div class="container mt-5 mb-5">
+    <div class="text-center mb-4">
+        <h1 class="fw-bold">Contáctanos</h1>
+        <p class="text-muted">¿Tienes alguna duda, sugerencia o problema? Escríbenos y te responderemos lo antes posible.</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+            <form method="post" class="p-4 rounded shadow bg-light">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre completo</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Tu nombre" required>
                 </div>
-            {% endfor %}
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="subject" class="form-label">Asunto</label>
+                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Motivo del mensaje" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary px-4 py-2">Enviar mensaje</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-6 text-center mb-3">
+            <h5><i class="bi bi-envelope-fill"></i> Correo</h5>
+            <p>soporte@marketplace.com</p>
+        </div>
+        <div class="col-md-6 text-center mb-3">
+            <h5><i class="bi bi-telephone-fill"></i> Teléfono</h5>
+            <p>+52 614 123 4567</p>
         </div>
     </div>
 </div>
-
 {% endblock %}
