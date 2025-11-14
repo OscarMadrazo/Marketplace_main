@@ -22,7 +22,7 @@
             {% if form.errors or form.non_field_errors %}
                 <div class="mb-4 p-6 bg-danger text-white rounded">
                     {% for field in form %}
-                        {{fiels.errors}}
+                        {{field.errors}}
                     {% endfor %}
 
                     {{ form.non_field_errors }}
@@ -37,6 +37,7 @@
                 <a href="{% url 'register' %}">¿No tienes cuenta? registrate aqui!</a>
             </div>
             
+
         </form>
     </div>
 </div>
