@@ -19,6 +19,9 @@
             
                 {% if request.user.is_authenticated %}
                     <li class="nav-item">
+                        <a href="{% url 'add_item' %}" class="nav-link">Add Item</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="{% url 'logout' %}" class="nav-link">Logout</a>
                     </li>
                 {% else %}
