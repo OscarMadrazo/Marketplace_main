@@ -29,53 +29,73 @@ Django lo utilizamos en la realización de aplicaciones web por la razón de que
 # Explicación de cada comando utilizado
 
 - cd “nombre”: Se utiliza para utilizar la carpeta
- con ese nombre u ubicación
+ con ese nombre u ubicación.
+
 - dir: Sirve para observar lo que tiene dentro una
- carpeta (cuando estas dentro de ella)
-- cls: Limpia la pantalla del cmd
+ carpeta (cuando estas dentro de ella).
+
+- cls: Limpia la pantalla del cmd.
+
 - md “nombre”: Sirve para crear un documento o
- carpeta
+ carpeta.
+
 -  python -m venv venv: Sirve para crear un
- ambiente virtual
+ ambiente virtual.
+
 - venv\Scripts\activate: Se utiliza para activar el
- ambiente virtual
+ ambiente virtual.
+
 - pip install django: Funciona para instalar Django
  en tu computador (pip es el instalador de
- paquetes de python)
+ paquetes de python).
+
 -  “nombre app” -m pip install –upgrade: aqui
  actualizamos la aplicacion, como puede ser
- python
+ python.
+
 - django-admin startproject “nombre”: Sirve para
  crear un proyecto y que genere carpetas y
  archivos necesarios dentro de esta.
+
 - python manage.py runserver: Sirve para
  prender el servidor local y poder ver el proyecto
  en funcionamiento (copiando la URL que nos da
  el cmd al navegador).
+
 - code . : Sirve para abrir la aplicación de Visual Studio
  Code y poder modificar/crear los códigos.
+
 - python manage.py startapp store: Sirve para crear un a
  aplicación dentro de tu proyecto creado. (donde esta
  store, se puede cambiar a otro nombre).
+
 - python manage.py migrate: Sirve para crear o actualizar
  base de datos para que se apliquen a tu proyecto.
+
 -  python manage.py makemigrations: Detecta los cambios
  que hiciste en tus modelos y actualiza la base de datos.
+
 - python manage.py createsuperuser: Crea un usuario
  administrador, con nombre, correo y contraseña
  personalizados para acceder al admin panel.
+
 - pip freeze > requirements.txt: Guarda una lista de las
  dependencias de tu proyecto con sus versiones.
+
 - git clone: Git clone sirve para copar un repositorio
  remoto a la computadora, creando una carpeta con todos
  los recursos que se guardan previamente al git hub.
+
 - git status .: Git status nos muestra el estado del
  repositorio y que nos hace falta guardar.
+
 - git add .: Sirve para Preparar todos los archivos que
  posteriormente vamos a guardar y decirle que aliste los
  sitios donde los guardara.
+
 - git commit -m: Git commit srve para guardar un
  comentario donde se guarden los recursos en el git hub.
+
 - git push: Con git push enviamos todos los recursos a la
  nube de la pagina git hub para tener todos los cambios ya
  guardados.
@@ -101,7 +121,7 @@ Es un patrón que utiliza Django para organizar aplicaciones
  encargado de la parte visual, donde se muestra toda la
  información y todo lo que el usuario observara por medio de
  HTML. 
-En otras palabras, el modelo se encarga de recabar toda la
+ En otras palabras, el modelo se encarga de recabar toda la
  información necesaria, la vista se encarga de organizar toda
  esa información del modelo para así organizarlo en el HTML
  que ya sería la parte del template y esto servirá para la parte
@@ -395,7 +415,6 @@ urlpatterns = [
 ]
 ```
 
-##Willy 
 ##Actualizaciones de forms.py (LoginForm, SignupForm, NewItemForm) 
 ```markdown
 En el archivo forms.py de nuestro proyecto Marketplace_main, se realizaron una serie de mejoras importantes en el registro de usuarios como en la creación de nuevos productos.
@@ -403,11 +422,6 @@ LoginForm (Formulario de inicio de sesión)
 Este formulario se apoya del formulario que la plataforma Django trae por defecto (AuthenticationForm). Lo que se realizó fue personalizar los campos username y password, a los cuales se les agregaron estilos que nos ofrece Bootstrap. En el apartado de username y password se agregó un comando placeholder para que el usuario sepa dónde debe escribirlo correctamente, e asimismo se le añadió la clase form-control para que obtenga una apariencia agradable. Por último, en la sección de password se agregó PasswordInput para que, al momento de añadir la contraseña, no se visualice al teclearse.
 SignupForm (Formulario de registro de usuario)
 Este formulario se basa en el formulario que Django ya trae por defecto para crear usuarios (UserCreationForm). Lo que se hizo fue personalizar cada uno de sus campos para que el formulario se vea más limpio y sea más fácil de usar. En los apartados de username, email, password1 y password2 se agregaron placeholders para que el usuario identifique dónde debe escribir sus datos. También se añadió la clase form-control en todos estos campos para que obtengan una apariencia más agradable y profesional. Además, los campos de password1 y password2 se configuraron con PasswordInput, para que las contraseñas no se visualicen al momento de teclearse, dando así mayor privacidad y seguridad al usuario.
-
-
-
-
-
 
 NewItemForm (Formulario para crear un nuevo producto)
 Este formulario toma como base un ModelForm, el cual se conecta directamente con el modelo Item. Lo que se realizó fue personalizar cada campo para que el usuario pueda agregar un producto de forma clara y ordenada. En el apartado de category se utilizó un campo de selección (Select) y se le agregó la clase form-select para que mantenga el estilo visual del resto del proyecto. En el campo name se añadió un TextInput con un diseño similar, permitiendo escribir el nombre del producto. En description se empleó un Textarea y se ajustó su tamaño para que el usuario pueda escribir una descripción más amplia sin complicaciones. El campo price también se dejó con un estilo limpio usando TextInput. Por último, en el apartado de image se utilizó FileInput, que permite subir una imagen del producto, y también se le añadió la clase form-select para mantener una apariencia uniforme en todos los campos.
@@ -537,7 +551,7 @@ def add_item(request):
 
     return render(request, 'store/form.html', context)
 ```
-##Gabi 
+
 ##Template (item.html)
 ```markdown
 El archivo item.html es una plantilla HTML de Django que forma parte de la aplicación store dentro del proyecto marketplace_main. Su función principal es mostrar la página de detalle de un producto, es decir, toda la información individual de un artículo que se encuentra publicado en el marketplace.
