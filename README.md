@@ -789,9 +789,9 @@ El archivo form.html es un template genérico utilizado para mostrar formularios
 
 {% endblock %}
 ```
-```markdown
-Paginas corriendo
-```
+
+# Paginas corriendo
+
 <img width="709" height="352" alt="image" src="https://github.com/user-attachments/assets/445e771e-20a1-4e1b-8c6a-8bf5a97e17b8" />
 <img width="921" height="516" alt="image" src="https://github.com/user-attachments/assets/f3088300-ab50-4a58-856a-fc20f6944322" />
 <img width="940" height="435" alt="image" src="https://github.com/user-attachments/assets/5bb32809-24a9-4bd4-a6c5-e736e2c76ca8" />
