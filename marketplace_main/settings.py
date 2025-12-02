@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-eu(qlsb09fn5@vvu6i=ebi*e%z&@44*ps65_n&8rtpg%tzq_5^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['overdefensive-singlemindedly-li.ngrok-free.dev']
+ALLOWED_HOSTS = ['127.0.0.1','overdefensive-singlemindedly-li.ngrok-free.dev']
+CSRF_TRUSTED_ORIGINS = [
+    'https://overdefensive-singlemindedly-li.ngrok-free.dev',
+]
+
 
 LOGIN_URL = '/store/login/'
 LOGIN_REDIRECT_URL = '/'
